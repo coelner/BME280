@@ -82,6 +82,7 @@ bool BME280::InitializeFilter()
   read(dummy, dummy, dummy);
 
   m_settings.filter = filter;
+  return true;
 }
 
 
@@ -119,6 +120,7 @@ bool BME280::WriteSettings()
    WriteRegister(CTRL_HUM_ADDR, ctrlHum);
    WriteRegister(CTRL_MEAS_ADDR, ctrlMeas);
    WriteRegister(CONFIG_ADDR, config);
+   return true;
 }
 
 
